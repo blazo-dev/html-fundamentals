@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4 HTML Assignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: min(100% - 2rem, 900px);
+            margin: 0 auto;
+
+            font-family: sans-serif;
+        }
+
+        /* Navigation Bar Styles */
+        .nav {
+            list-style-type: none;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        .nav__item {
+            float: left;
+            margin-right: 15px;
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+        }
+
+        .nav__link:hover {
+            background-color: #ddd;
+        }
+
+        /* Form Styles */
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form__label {
+            display: block;
+        }
+
+        .form__fieldset {
+            margin: 0;
+
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form__group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+
+        }
+
+        .form__input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form__radio {
+            display: flex;
+            align-items: center;
+
+            margin: 0;
+        }
+
+        .form__textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form__submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form__submit:hover {
+            background-color: #45a049;
+        }
+
+        /* Table Styles */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table__header,
+        .table__cell {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table__header {
+            background-color: #f4f4f4;
+        }
+
+        /* Image Styles */
+        .image {
+            margin-bottom: 20px;
+        }
+
+        .image--rounded {
+            border-radius: 15px;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+<!-- Part 3: Navigation Bar -->
+<nav>
+    <ul class="nav">
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Part 1: Form Creation -->
+<h2>Contact Form</h2>
+<form class="form">
+    <label for="name" class="form__label">Name:</label>
+    <input type="text" id="name" name="name" class="form__input" required>
+
+    <label for="email" class="form__label">Email:</label>
+    <input type="email" id="email" name="email" class="form__input" required>
+
+    <label for="message" class="form__label">Message:</label>
+    <textarea id="message" name="message" class="form__textarea" rows="4" required></textarea>
+
+    <!-- Bonus: Radio Button Group -->
+    <fieldset class="form__fieldset">
+        <legend class="form__label">How did you find this site?:</legend>
+        <div class="form__group">
+            <input type="radio" id="google" name="source" value="Google" class="form__radio">
+            <label for="google" class="form__label">Google</label>
+        </div>
+
+        <div class="form__group">
+            <input type="radio" id="social-media" name="source" value="Social Media" class="form__radio">
+            <label for="social-media" class="form__label">Social Media</label>
+        </div>
+
+    </fieldset>
+
+    <input type="submit" value="Submit" class="form__submit">
+</form>
+
+<!-- Part 2: Table Structure -->
+<h2>Product Table</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th class="table__header">Product Name</th>
+        <th class="table__header">Price</th>
+        <th class="table__header">Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="table__cell">Product 1</td>
+        <td class="table__cell">$10.00</td>
+        <td class="table__cell">5</td>
+    </tr>
+    <tr>
+        <td class="table__cell">Product 2</td>
+        <td class="table__cell">$20.00</td>
+        <td class="table__cell">3</td>
+    </tr>
+    <tr>
+        <td class="table__cell">Product 3</td>
+        <td class="table__cell">$15.00</td>
+        <td class="table__cell">7</td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Part 4: Adding Images -->
+<h2>Images</h2>
+<img src="https://placehold.co/300x200" alt="Placeholder Image" class="image">
+<br><br>
+<!-- Bonus: Rounded Image -->
+<img src="https://placehold.co/300x200" alt="Rounded Placeholder Image" class="image image--rounded">
+</body>
+</html>
